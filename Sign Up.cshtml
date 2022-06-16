@@ -1,0 +1,123 @@
+﻿@page
+@model DWebApp.Pages.Sign_UpModel
+@{
+}
+<h3>Sign_Up From</h3>
+
+@if (Model.hasData)
+{
+    <p>Hello @Model.firstName @Model.lastName</p>
+    <p>We received your following message correctly;</p>
+    <p>@Model.Email</p>
+    <p>@Model.Password</p>
+    <p>@Model.ConfirmPassword</p>
+    <p>@Model.PhoneNumber</p>
+}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <!-- Nav pills -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-bs-toggle="pill" href="#Account">ACCOUNT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="pill" href="#Personalinfo">PERSONAL INFO</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="pill" href="#Paymentdetail">PAYMENT DETAIL</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="Account" class="container tab-pane active"><br>
+
+<div class="container">
+    <form method="POST"  action="/action_page.php" class="was-validated">
+        <div class="mb-8 mt-8">
+        <div class="row">
+        <div class="col">
+     <input type="text" id="lname" name="lastname" class="form-control form-floating"  placeholder="First Name " required />
+        <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <br />
+      
+        <div class="col">
+    
+        <input type="text" id="lname" name="lastname" class="form-control form-floating"  placeholder="Last Name "  required />
+        <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <br />
+       
+        </div>
+
+         <div class="row">
+              <div class="col">
+                 
+        <input type="text" id="mes" name="message" class="form-control form-floating"  placeholder="Email"   required/>
+        </div>
+        </div><br />
+        
+         <div class="row">
+              <div class="col">
+                 
+          <input type="password" id="mes" name="message"  class="form-control form-floating"  placeholder="Password" required/>
+         
+          </div>
+          <br />
+          <div class="col">
+              
+          <input type="password" id="mes" name="message" class="form-control form-floating"  placeholder="Confirm Password" required />
+           </div>
+          </div>
+         
+          <br />
+
+          
+         <div class="row">
+              <div class="col">
+          <input type="text" id="mes" name="message"  class="form-control form-floating"  placeholder="Phone Number"  required />
+                    </div>
+          </div>
+          <br />
+           </div>
+           <div class="row">
+              <div class="col">
+               <div class="text-center" style="float:right">
+        <input type="submit" value="Next"  class="btn btn-primary" />
+        </div>
+        </div>
+        </div>
+       
+   
+     </form>
+     </div>
+      </div>
+     
+    <div id="Personalinfo" class="container tab-pane fade"><br>
+      
+      <p>    </p>
+    </div>
+    <div id="Paymentdetail" class="container tab-pane fade"><br>
+    
+      <p>.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+   
